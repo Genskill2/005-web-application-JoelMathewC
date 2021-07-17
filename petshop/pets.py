@@ -83,7 +83,7 @@ def edit(pid):
         description = request.form.get('description')
         sold = request.form.get("sold")
         
-        if sold == 'on':
+        if sold == 'on' or sold == '1':
         	sold = datetime.datetime.strptime(datetime.date.today().strftime("%Y-%m-%d"), '%Y-%m-%d').date()
         else:
         	sold = ''
